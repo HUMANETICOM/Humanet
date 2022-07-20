@@ -1,4 +1,4 @@
-#npm install blk-design-system --legacy-peep-ders
+#npm i blk-design-system-react --legacy-peep-ders
 
 Humanet is a responsive Bootstrap 4 kit, developed using [React](https://reactjs.org/), [Reactstrap](https://reactstrap.github.io/) and [create-react-app](https://facebook.github.io/create-react-app/), and it is provided for free by Creative Tim. It is a beautiful cross-platform UI kit featuring over 70 elements and 3 templates.
 
@@ -22,7 +22,7 @@ Humanet System React is built on top of the much awaited Bootstrap 4 (Reactstrap
 
 ## Quick start
 
-- `npm i blk-design-system-react` or 'npm install blk-design-system --legacy-peep-ders'
+- `npm i blk-design-system-react` or 'npm i blk-design-system-react --legacy-peep-ders'
 - [Download from Github](https://github.com/creativetimofficial/blk-design-system-react/archive/main.zip).
 - [Download from Creative Tim](https://www.creative-tim.com/product/blk-design-system-react).
 - Install with [Bower](https://bower.io/): ```bower install blk-design-system-react```.
