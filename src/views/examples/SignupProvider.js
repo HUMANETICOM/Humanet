@@ -305,7 +305,7 @@ export default function SignupProvider() {
                   </p>
                 </TabPane>
               </TabContent>
-            </Container>
+          </Container>
         <Footer/>
         </Container>
         </div>
@@ -333,6 +333,7 @@ const humae ={
   color: '#1f2251',
   fontWeight: 'bolder',
 }
+
 const navlink={
   color: '#1f2251',
   border: '2px black solid',

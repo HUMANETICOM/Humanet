@@ -130,7 +130,7 @@ export default function LandingPage() {
             </Row>
           </div>
         </div>
-        <section className="section section-lg">
+        {/* <section className="section section-lg">
           <section className="section">
             <img
               alt="..."
@@ -256,9 +256,9 @@ export default function LandingPage() {
               </Row>
             </Container>
           </section>
-        </section>
+        </section> */}
         <section className="section section-lg">
-          <img
+          {/* <img
             alt="..."
             className="path"
             src={require("assets/img/path4.png").default}
@@ -272,7 +272,7 @@ export default function LandingPage() {
             alt="..."
             className="path3"
             src={require("assets/img/path2.png").default}
-          />
+          /> */}
           <Container>
             <Row className="justify-content-center">
               <Col lg="12">
@@ -326,7 +326,7 @@ export default function LandingPage() {
           </Container>
         </section>
         <section className="section section-lg section-safe">
-          <img
+          {/* <img
             alt="..."
             className="path"
             src={require("assets/img/path5.png").default}
@@ -416,10 +416,10 @@ export default function LandingPage() {
                 </div>
               </Col>
             </Row>
-          </Container>
+          </Container> */}
         </section>
         <section className="section section-lg">
-          <img
+          {/* <img
             alt="..."
             className="path"
             src={require("assets/img/path4.png").default}
@@ -428,7 +428,7 @@ export default function LandingPage() {
             alt="..."
             className="path2"
             src={require("assets/img/path2.png").default}
-          />
+          /> */}
           <Col md="12">
             <Card className="card-chart card-plain">
               <CardHeader>

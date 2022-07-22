@@ -14,6 +14,7 @@ import AboutUs from "views/examples/AboutUs.js";
 import HumaE from './views/examples/HumaE.js';
 import SignupUser from './views/examples/SignupUser.js';
 import SignupProvider from './views/examples/SignupProvider.js';
+import Pricing from './views/examples/Pricing.js';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -38,6 +39,10 @@ ReactDOM.render(
       <Route
         path="/signup-provider"
         render={(props) => <SignupProvider {...props} />}
+      />
+      <Route
+        path="/pricing"
+        render={(props) => <Pricing {...props} />}
       />
       <Route
         path="/register-page"

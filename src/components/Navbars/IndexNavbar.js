@@ -138,7 +138,7 @@ export default function IndexNavbar() {
               </NavLink>
             </NavItem>
             <NavItem className="p-0">
-              <NavLink tag={Link} to="/landing-page">
+              <NavLink tag={Link} to="/pricing">
                 Pricing
               </NavLink>
             </NavItem>
