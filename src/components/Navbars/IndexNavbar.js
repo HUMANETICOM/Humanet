@@ -211,7 +211,7 @@ export default function IndexNavbar() {
             <Button
               className="btn-simple btn-round"
               color="neutral"
-              to="landing-page"
+              to="register-page"
               tag={Link}
             >
               Log In

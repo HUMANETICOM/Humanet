@@ -14,12 +14,13 @@ import {
   Container,
   Row,
   Col,
+  NavLink
 } from "reactstrap";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footer/Footer.js";
-
+import { Link } from "react-router-dom"; 
 import bigChartData from "variables/charts.js";
 
 export default function LandingPage() {
@@ -78,14 +79,13 @@ export default function LandingPage() {
                   whole heart. I am alone, and feel...
                 </p>
                 <div className="btn-wrapper mb-3">
-                  <p className="category text-success d-inline">
+                    <NavLink tag={Link} to="/pricing" className="category text-success d-inline">
                     From 9.99%/mo
-                  </p>
+                    </NavLink>
                   <Button
                     className="btn-link"
                     color="success"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
+                    tag={Link} to="/pricing"
                     size="sm"
                   >
                     <i className="tim-icons icon-minimal-right" />
@@ -120,12 +120,33 @@ export default function LandingPage() {
                   </div>
                 </div>
               </Col>
-              <Col lg="4" md="5">
-                <img
-                  alt="..."
-                  className="img-fluid"
-                  src={require("assets/img/etherum.png").default}
-                />
+              <Col lg="4" md="5" style={{position: "relative"}}>
+                <Container>
+                <div>
+                  <img
+                    alt="..."
+                    className="img-fluid"
+                    src={require("assets/img/etherum.png").default}
+                    style={{position: "absolute", marginTop: "-200px", marginLeft: "-150px"}}
+                  />
+                  <p className="text-white mb-3" 
+                  style={{position: "absolute", marginTop: "-200px", marginLeft: "150px", width: "50%"}}>
+                  The front of the coin features a bird logo that represents a Huma bird and medical heath, resulting in the phrase "One Huma."
+                  </p>
+                </div>
+                <div>
+                  <img
+                    alt="..."
+                    className="img-fluid"
+                    src={require("assets/img/coin-back.png").default}
+                    style={{position: "absolute", zIndex:"-1"}}
+                  />
+                  <p className="text-white mb-3" 
+                  style={{position: "absolute", marginTop: "150px", marginLeft: "-150px", width: "50%"}}>
+                  The back represents the word connected as a whole, bringing world health closer together.
+                  </p>
+                </div>
+                </Container>
               </Col>
             </Row>
           </div>
@@ -326,7 +347,7 @@ export default function LandingPage() {
           </Container>
         </section>
         <section className="section section-lg section-safe">
-          {/* <img
+          <img
             alt="..."
             className="path"
             src={require("assets/img/path5.png").default}
@@ -377,9 +398,7 @@ export default function LandingPage() {
                   <hr className="line-success" />
                   <h3>Awesome features</h3>
                   <p>
-                    The design system comes with three pre-built pages to help
-                    you get started faster. You can change the text and images
-                    and you're good to go.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit dignissim pellentesque. Pellentesque posuere semper tellus, vel placerat tellus maximus id.
                   </p>
                   <ul className="list-unstyled mt-5">
                     <li className="py-2">
@@ -388,7 +407,7 @@ export default function LandingPage() {
                           <i className="tim-icons icon-vector" />
                         </div>
                         <div className="ml-3">
-                          <h6>Carefully crafted components</h6>
+                          <h6>Lorem ipsum dolor sit amet</h6>
                         </div>
                       </div>
                     </li>
@@ -398,7 +417,7 @@ export default function LandingPage() {
                           <i className="tim-icons icon-tap-02" />
                         </div>
                         <div className="ml-3">
-                          <h6>Amazing page examples</h6>
+                          <h6>Lorem ipsum dolor sit amet</h6>
                         </div>
                       </div>
                     </li>
@@ -408,7 +427,7 @@ export default function LandingPage() {
                           <i className="tim-icons icon-single-02" />
                         </div>
                         <div className="ml-3">
-                          <h6>Super friendly support team</h6>
+                          <h6>Lorem ipsum dolor sit amet</h6>
                         </div>
                       </div>
                     </li>
@@ -416,19 +435,7 @@ export default function LandingPage() {
                 </div>
               </Col>
             </Row>
-          </Container> */}
-        </section>
-        <section className="section section-lg">
-          {/* <img
-            alt="..."
-            className="path"
-            src={require("assets/img/path4.png").default}
-          />
-          <img
-            alt="..."
-            className="path2"
-            src={require("assets/img/path2.png").default}
-          /> */}
+          </Container>
           <Col md="12">
             <Card className="card-chart card-plain">
               <CardHeader>
@@ -450,122 +457,6 @@ export default function LandingPage() {
               </CardBody>
             </Card>
           </Col>
-        </section>
-        <section className="section section-lg section-coins">
-          <img
-            alt="..."
-            className="path"
-            src={require("assets/img/path3.png").default}
-          />
-          <Container>
-            <Row>
-              <Col md="4">
-                <hr className="line-info" />
-                <h1>
-                  Choose the coin{" "}
-                  <span className="text-info">that fits your needs</span>
-                </h1>
-              </Col>
-            </Row>
-            <Row>
-              <Col md="4">
-                <Card className="card-coin card-plain">
-                  <CardHeader>
-                    <img
-                      alt="..."
-                      className="img-center img-fluid"
-                      src={require("assets/img/bitcoin.png").default}
-                    />
-                  </CardHeader>
-                  <CardBody>
-                    <Row>
-                      <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Light Coin</h4>
-                        <span>Plan</span>
-                        <hr className="line-primary" />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>50 messages</ListGroupItem>
-                        <ListGroupItem>100 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
-                    </Row>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button className="btn-simple" color="primary">
-                      Get plan
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-coin card-plain">
-                  <CardHeader>
-                    <img
-                      alt="..."
-                      className="img-center img-fluid"
-                      src={require("assets/img/etherum.png").default}
-                    />
-                  </CardHeader>
-                  <CardBody>
-                    <Row>
-                      <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Dark Coin</h4>
-                        <span>Plan</span>
-                        <hr className="line-success" />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>150 messages</ListGroupItem>
-                        <ListGroupItem>1000 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
-                    </Row>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button className="btn-simple" color="success">
-                      Get plan
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-coin card-plain">
-                  <CardHeader>
-                    <img
-                      alt="..."
-                      className="img-center img-fluid"
-                      src={require("assets/img/ripp.png").default}
-                    />
-                  </CardHeader>
-                  <CardBody>
-                    <Row>
-                      <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Bright Coin</h4>
-                        <span>Plan</span>
-                        <hr className="line-info" />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>350 messages</ListGroupItem>
-                        <ListGroupItem>10K emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
-                    </Row>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button className="btn-simple" color="info">
-                      Get plan
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
         </section>
         <Footer />
       </div>

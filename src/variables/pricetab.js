@@ -1,13 +1,3 @@
-/*
- * Reactstrap "Nested" Tabs Example
- *
- * By Luke Schoen @ltfschoen
- *
- * References:
- *  - Reactstrap Tabs https://reactstrap.github.io/components/tabs/
- *  - Related issue that this tries to solve https://github.com/reactstrap/reactstrap/issues/1599
- */
-
 import React, { Component } from 'react';
 import { Container, Row, Col, Nav, NavItem, NavLink,
   TabContent, TabPane
@@ -71,19 +61,19 @@ class SubTabA extends Component {
             <Price/>
           </TabPane>
         </TabContent>
-        <TabContent activeTab={activeSubTab}>
+        <TabContent activeTab={activeSubTab} style={tabsize}>
           <TabPane tabId="2">
-            MainTab A SubTab 2 Content
+          <Price/>
           </TabPane>
         </TabContent>
-        <TabContent activeTab={activeSubTab}>
+        <TabContent activeTab={activeSubTab} style={tabsize}>
           <TabPane tabId="3">
-            MainTab A SubTab 3 Content
+          <Price/>
           </TabPane>
         </TabContent>
-        <TabContent activeTab={activeSubTab}>
+        <TabContent activeTab={activeSubTab} style={tabsize}>
           <TabPane tabId="4">
-            MainTab A SubTab 4 Content
+            <Price/>
           </TabPane>
         </TabContent>
       </Nav>
@@ -110,7 +100,7 @@ class SubTabB extends Component {
             style={activeSubTab === '1' ? { fontSize: "1.25rem" } : {}}
             onClick={() => { this.toggleSubTab('1'); }}
           >
-            MainTab B SubTab 1
+            Medical
           </NavLink>
         </NavItem>
         <NavItem>
@@ -118,17 +108,17 @@ class SubTabB extends Component {
             style={activeSubTab === '2' ? { fontSize: "1.25rem" } : {}}
             onClick={() => { this.toggleSubTab('2'); }}
           >
-            MainTab B SubTab 2
+            Others
           </NavLink>
         </NavItem>
-        <TabContent activeTab={activeSubTab}>
+        <TabContent activeTab={activeSubTab} style={tabsize}>
           <TabPane tabId="1">   
-            MainTab B SubTab 1 Content
+            <Price/>
           </TabPane>
         </TabContent>
-        <TabContent activeTab={activeSubTab}>
+        <TabContent activeTab={activeSubTab} style={tabsize}>
           <TabPane tabId="2">
-            MainTab B SubTab 2 Content
+            <Price/>
           </TabPane>
         </TabContent>
       </Nav>
@@ -178,14 +168,14 @@ class MainComponent extends Component {
             <NavLink
               className={classnames({ active: activeMainTab === '1' })}
               onClick={() => { this.toggleMainTab('1'); }}>
-              MainTab A
+              User
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
               className={classnames({ active: activeMainTab === '2' })}
               onClick={() => { this.toggleMainTab('2'); }}>
-              MainTab B
+              Provider
             </NavLink>
           </NavItem>
         </Nav>

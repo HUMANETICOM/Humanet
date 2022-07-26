@@ -9,7 +9,7 @@ import {
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footer/Footer.js";
-import MainComponent from "variables/pricetab.js";
+import PriceComponent from "variables/pricetab.js";
 
 export default function Pricing() {
   React.useEffect(() => {
@@ -38,7 +38,7 @@ export default function Pricing() {
             </Row>
             <Container className="text-center">
             </Container>
-            <MainComponent/>
+            <PriceComponent/>
           </Container>
         </section>
         <Footer />

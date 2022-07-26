@@ -101,7 +101,7 @@ export default function RegisterPage() {
                         alt="..."
                         src={require("assets/img/square-purple-1.png").default}
                       />
-                      <CardTitle tag="h4">Register</CardTitle>
+                      <CardTitle tag="h4">Log In</CardTitle>
                     </CardHeader>
                     <CardBody>
                       <Form className="form">

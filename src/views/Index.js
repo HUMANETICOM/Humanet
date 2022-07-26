@@ -14,7 +14,7 @@ import Footer from "components/Footer/Footer.js";
 // import Notifications from "views/IndexSections/Notifications.js";
 // import Typography from "views/IndexSections/Typography.js";
 // import JavaScript from "views/IndexSections/JavaScript.js";
-// import NucleoIcons from "views/IndexSections/NucleoIcons.js";
+import NucleoIcons from "views/IndexSections/NucleoIcons.js";
 // import Signup from "views/IndexSections/Signup.js";
 // import Examples from "views/IndexSections/Examples.js";
 // import Download from "views/IndexSections/Download.js";
@@ -31,6 +31,7 @@ export default function Index() {
         <div className="main">
           <Abouthandset/>
           <Scanme/>
+          <NucleoIcons />
           {/* <Basics />
           <Navbars />
           <Tabs />
@@ -38,7 +39,6 @@ export default function Index() {
           <Notifications />
           <Typography />
           <JavaScript />
-          <NucleoIcons />
           <Signup />
           <Examples />
           <Download /> */}
