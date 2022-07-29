@@ -4,11 +4,13 @@ import bg from '../../assets/img/bg.mp4';
 
 const BG = () => {
   return (
-    <Container fluid={true} className="bg">
-        <video className='videoTag' autoPlay loop muted style={videobg}>
-          <source src={bg} type='video/mp4' />
-        </video>
+    <div className="wrapper">
+      <Container fluid={true} className="bg">
+          <video className='videoTag' autoPlay loop muted style={videobg}>
+            <source src={bg} type='video/mp4' />
+          </video>
       </Container>
+    </div>
   );
 }
 const videobg = {

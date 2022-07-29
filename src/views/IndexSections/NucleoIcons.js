@@ -30,33 +30,29 @@ export default function NucleoIcons() {
       <Container>
         <Row className="justify-content-center">
           <Col lg="8" md="12">
-            <h2 className="title">Nucleo Icons</h2>
+            <h2 className="title" style={{color: 'black', fontSize:'50px'}}>Humanet Partnership</h2>
             <h4 className="description">
-              BLK• Design System PRO comes with 100 custom icons made by our
-              friends from NucleoApp. The official package contains over 2.100
-              thin icons which are looking great in combination with BLK• Design
-              System PRO Make sure you check all of them and use those that you
-              like the most.
+            Humanet has partnerships in place in every country's medical system and in the businesses that oversee its operations, and we share both our profits and our liabilities with those partners.
             </h4>
             <div className="btn-wrapper">
               <Button
                 className="btn-round"
-                color="primary"
+                color="info"
                 href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/icons"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                View Demo Icons
+                View Humanet partnership
               </Button>
               <Button
                 className="btn-simple btn-round"
-                color="primary"
+                color="info"
                 href="https://nucleoapp.com/?ref=1712"
                 rel="noopener noreferrer"
                 size="lg"
                 target="_blank"
               >
-                View All Icons
+                View Humanet members
               </Button>
             </div>
           </Col>
@@ -65,7 +61,7 @@ export default function NucleoIcons() {
           <a href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/icons">
             <div className="icons-container blur-item on-screen mt-5">
               {/* Center */}
-              <i className="icon tim-icons icon-coins" />
+              <i className="icon icon-sm tim-icons icon-facebook" />
               {/* Right 1 */}
               <i className="icon icon-sm tim-icons icon-spaceship" />
               <i className="icon icon-sm tim-icons icon-money-coins" />
@@ -84,7 +80,7 @@ export default function NucleoIcons() {
               <i className="icon tim-icons icon-wallet-43" />
             </div>
             <span className="blur-hidden h5 text-primary">
-              Eplore all the 21.000+ Nucleo Icons
+              Eplore all the 56+ Humanet Partnership
             </span>
           </a>
         </div>

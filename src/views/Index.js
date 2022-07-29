@@ -20,6 +20,7 @@ import NucleoIcons from "views/IndexSections/NucleoIcons.js";
 // import Download from "views/IndexSections/Download.js";
 import Abouthandset from "views/IndexSections/abouthandset.js";
 import Scanme from "views/IndexSections/scanme.js";
+import Testimonial from "./IndexSections/Testimonial";
 
 export default function Index() {
   
@@ -42,6 +43,7 @@ export default function Index() {
           <Signup />
           <Examples />
           <Download /> */}
+          <Testimonial/>
         </div>
         <Footer />
       </div>

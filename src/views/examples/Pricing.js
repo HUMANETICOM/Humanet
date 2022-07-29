@@ -23,7 +23,7 @@ export default function Pricing() {
     <>
       <IndexNavbar />
       <div className="wrapper">
-        <section className="section section-lg section-coins">
+        <section className="section section-lg mt-5">
           <Container>
             <Row>
               <Col md="4">

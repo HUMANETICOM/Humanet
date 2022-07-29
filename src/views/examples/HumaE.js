@@ -233,6 +233,12 @@ export default function HumaE() {
                           caption: 'X-ray',
                           key: 3,
                           src: 'https://picsum.photos/id/678/1200/300'
+                        },
+                        {
+                          altText: 'Slide 3',
+                          caption: 'X-ray',
+                          key: 3,
+                          src: 'https://picsum.photos/id/678/1200/300'
                         }
                       ]}
                     />
