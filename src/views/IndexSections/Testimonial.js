@@ -25,16 +25,16 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="mb-5 text-center d-flex justify-content-center">
+    <div className="mb-5 text-center d-flex justify-content-center text-dark">
       <Carousel interval={3000} style={{ minWidth: '75%', maxWidth: '75%'}}>
         {testimonial.map((c, index) => {
           return (
             <Carousel.Item interval={4000}>
               <div style={{ height: 200}}>
-                <p>{c.content}</p>
+                <p className="text-dark">{c.content}</p>
               </div>
               <Carousel.Caption>
-                <p>{c.author}</p>
+                <p className="text-dark">{c.author}</p>
               </Carousel.Caption>
             </Carousel.Item>
           );

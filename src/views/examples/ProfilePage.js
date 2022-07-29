@@ -302,6 +302,7 @@ export default function ProfilePage() {
             </Row>
           </Container>
         </div>
+        
         <div className="section">
           <Container>
             <Row className="justify-content-between">

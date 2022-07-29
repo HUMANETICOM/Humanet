@@ -1,20 +1,4 @@
-/*!
 
-=========================================================
-* BLK Design System React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import classnames from "classnames";
 // reactstrap components
@@ -23,31 +7,43 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   CardImg,
   CardTitle,
   Label,
   FormGroup,
-  Form,
   Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
+  Table,
+  TabPane,
+  FormText,
+  NavLink,
+  TabContent,
+  Nav,
+  NavItem,
   Container,
   Row,
   Col,
+  
 } from "reactstrap";
-
+import PerfectScrollbar from "perfect-scrollbar";
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footer/Footer.js";
 
 export default function RegisterPage() {
+  const [tabs, setTabs] = React.useState(1);
+  React.useEffect(() => {
+    if (navigator.platform.indexOf("Win") > -1) {
+      document.documentElement.className += " perfect-scrollbar-on";
+      document.documentElement.classList.remove("perfect-scrollbar-off");
+      let tables = document.querySelectorAll(".table-responsive");
+      for (let i = 0; i < tables.length; i++) {
+        ps = new PerfectScrollbar(tables[i]);
+      }
+    }
+  },[]);
+  let ps = null;
   const [squares1to6, setSquares1to6] = React.useState("");
   const [squares7and8, setSquares7and8] = React.useState("");
-  const [fullNameFocus, setFullNameFocus] = React.useState(false);
-  const [emailFocus, setEmailFocus] = React.useState(false);
-  const [passwordFocus, setPasswordFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.toggle("register-page");
     document.documentElement.addEventListener("mousemove", followCursor);
@@ -84,7 +80,7 @@ export default function RegisterPage() {
           <div className="content">
             <Container>
               <Row>
-                <Col className="offset-lg-0 offset-md-3" lg="5" md="6">
+                <Col className="offset-lg-0 offset-md-3" lg="12" md="12">
                   <div
                     className="square square-7"
                     id="square7"
@@ -104,78 +100,129 @@ export default function RegisterPage() {
                       <CardTitle tag="h4">Log In</CardTitle>
                     </CardHeader>
                     <CardBody>
-                      <Form className="form">
-                        <InputGroup
-                          className={classnames({
-                            "input-group-focus": fullNameFocus,
-                          })}
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="tim-icons icon-single-02" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Full Name"
-                            type="text"
-                            onFocus={(e) => setFullNameFocus(true)}
-                            onBlur={(e) => setFullNameFocus(false)}
-                          />
-                        </InputGroup>
-                        <InputGroup
-                          className={classnames({
-                            "input-group-focus": emailFocus,
-                          })}
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="tim-icons icon-email-85" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Email"
-                            type="text"
-                            onFocus={(e) => setEmailFocus(true)}
-                            onBlur={(e) => setEmailFocus(false)}
-                          />
-                        </InputGroup>
-                        <InputGroup
-                          className={classnames({
-                            "input-group-focus": passwordFocus,
-                          })}
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="tim-icons icon-lock-circle" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Password"
-                            type="text"
-                            onFocus={(e) => setPasswordFocus(true)}
-                            onBlur={(e) => setPasswordFocus(false)}
-                          />
-                        </InputGroup>
-                        <FormGroup check className="text-left">
-                          <Label check>
-                            <Input type="checkbox" />
-                            <span className="form-check-sign" />I agree to the{" "}
-                            <a
-                              href="#pablo"
-                              onClick={(e) => e.preventDefault()}
+                      <Col className="ml-auto mr-auto" lg="5" md="12">
+                        <Card className="card-coin card-plain">
+                          <CardHeader>
+                            <h4 className="title">Login Form</h4>
+                          </CardHeader>
+                          <CardBody>
+                            <Nav
+                              className="nav-tabs-primary justify-content-center"
+                              tabs
                             >
-                              terms and conditions
-                            </a>
-                            .
-                          </Label>
-                        </FormGroup>
-                      </Form>
+                              <NavItem>
+                                <NavLink
+                                  className={classnames({
+                                    active: tabs === 1,
+                                  })}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    setTabs(1);
+                                  }}
+                                  href="#pablo"
+                                >
+                                  Users
+                                </NavLink>
+                              </NavItem>
+                              <NavItem>
+                                <NavLink
+                                  className={classnames({
+                                    active: tabs === 2,
+                                  })}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    setTabs(2);
+                                  }}
+                                  href="#pablo"
+                                >
+                                  Employees
+                                </NavLink>
+                              </NavItem>
+                            </Nav>
+                            <TabContent
+                              className="tab-subcategories"
+                              activeTab={"tab" + tabs}
+                            >
+                              <TabPane tabId="tab1">
+                                <Table className="tablesorter" responsive>
+                                <Row>
+                                  <Label sm="3">Username</Label>
+                                  <Col sm="9">
+                                    <FormGroup>
+                                      <Input
+                                        type="text"
+                                      />
+                                    </FormGroup>
+                                  </Col>
+                                </Row>
+                                <Row>
+                                  <Label sm="3">User ID</Label>
+                                  <Col sm="9">
+                                    <FormGroup>
+                                      <Input type="text" />
+                                    </FormGroup>
+                                  </Col>
+                                </Row>
+                                <Row>
+                                  <Label sm="3">Email or Number</Label>
+                                  <Col sm="9">
+                                    <FormGroup>
+                                      <Input type="text" />
+                                    </FormGroup>
+                                  </Col>
+                                </Row>
+                                </Table>
+                                <Button
+                                  className="btn-simple btn-icon btn-round float-right"
+                                  color="primary"
+                                  type="submit"
+                                >
+                                  <i className="tim-icons icon-send" />
+                                </Button>
+                              </TabPane>
+                              <TabPane tabId="tab2">
+                                <Table className="tablesorter" responsive>
+                                  <Row>
+                                    <Label sm="3">Username</Label>
+                                    <Col sm="9">
+                                      <FormGroup>
+                                        <Input
+                                          type="text"
+                                        />
+                                      </FormGroup>
+                                    </Col>
+                                  </Row>
+                                  <Row>
+                                    <Label sm="3">User ID</Label>
+                                    <Col sm="9">
+                                      <FormGroup>
+                                        <Input type="text" />
+                                      </FormGroup>
+                                    </Col>
+                                  </Row>
+                                  <Row>
+                                    <Label sm="3">Email or Number</Label>
+                                    <Col sm="9">
+                                      <FormGroup>
+                                        <Input type="text" />
+                                      </FormGroup>
+                                    </Col>
+                                  </Row>
+                                  </Table>
+                                <Button
+                                  className="btn-simple btn-icon btn-round float-right"
+                                  color="primary"
+                                  type="submit"
+                                >
+                                  <i className="tim-icons icon-send" />
+                                </Button>
+                              </TabPane>
+                            </TabContent>
+                          </CardBody>
+                        </Card>
+                      </Col>
                     </CardBody>
-                    <CardFooter>
-                      <Button className="btn-round" color="primary" size="lg">
-                        Get Started
-                      </Button>
-                    </CardFooter>
+                    
                   </Card>
                 </Col>
               </Row>
